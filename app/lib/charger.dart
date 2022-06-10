@@ -1,6 +1,10 @@
 class Charger {
-  final String id;
-  final String network;
+  final int id;
+  final int networkId;
 
-  const Charger({required this.id, required this.network});
+  const Charger({required this.id, required this.networkId});
+
+  factory Charger.fromJson(Map<String, dynamic> json) {
+    return Charger(id: json['id'], networkId: json['networkId']);
+  }
 }
